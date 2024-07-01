@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="testimonials">
         <h4>Testimonial Component</h4>
     </div>
 </template>
@@ -9,5 +9,7 @@ export default {
 }
 </script>
 <style>
-    
+    #testimonials {
+        min-height: 100vh;
+    }
 </style>

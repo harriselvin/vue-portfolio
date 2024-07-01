@@ -1,6 +1,6 @@
 <template>
-  <navbar-comp />
-  <router-view/>
+    <navbar-comp />
+    <router-view/>
 </template>
 <script>
 import NavbarComp from "./components/NavbarComp.vue";
@@ -22,16 +22,116 @@ export default {
   font-family: "Roboto", sans-serif;
 }
 
+.logo img {
+    height: 3em;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+.container {
+  padding: .5em 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #00abf0;
+  margin: 0;
+  min-width: 100%;
+}
+
 nav {
-  padding: 30px;
+  background-color: #00abf0 !important;
 }
 
 nav a {
-  font-weight: bold;
-  color: #2c3e50;
+  padding: 0 .5em;
 }
 
-nav a.router-link-exact-active {
-  color: #42b983;
+nav a {
+  color: white !important;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+nav a:hover {
+  scale: 1.1;
+}
+
+.resume-btn {
+  background-color: white;
+  margin: 0 .3em 0 0;
+}
+
+.resume-btn:active {
+  opacity: .9;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+}
+
+svg {
+  height: 1.5em;
+  transition: .3s;
+  margin: 0 .5em 0 0;
+  color: white;
+}
+
+.offcanvas-body {
+  background-color: #00abf0 !important;
+}
+
+.offcanvas-body li {
+  text-align: left;
+}
+
+.navbar-toggler {
+  background-color: white;
+}
+
+.btn-links {
+  display: flex;
+  flex-direction: column;
+  margin: 2em 0 0;
+}
+
+.btn-links a {
+  flex: 1;
+  background-color: white;
+  margin: 1em 0 0;
+  color: black !important;
+}
+
+.btn-links a:active {
+  scale: 1;
+  border: 1px solid white;
+}
+
+@media only screen and (min-width: 500px) and (max-width: 750px) {
+  .desktop-nav {
+    display: none;
+  }
+  .mobile-nav {
+    display: block;
+  }
+}
+@media only screen and (min-width: 301px) and (max-width: 500px) {
+  .desktop-nav {
+    display: none;
+  }
+  .mobile-nav {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .desktop-nav {
+    display: none;
+  }
+  .mobile-nav {
+    display: block;
+  }
 }
 </style>

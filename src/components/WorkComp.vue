@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="work">
         <h4>Work Component</h4>
     </div>
 </template>
@@ -9,5 +9,7 @@ export default {
 }
 </script>
 <style>
-    
+    #work {
+        min-height: 100vh;
+    }
 </style>
