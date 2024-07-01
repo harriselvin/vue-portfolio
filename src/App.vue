@@ -46,6 +46,7 @@ nav {
 
 nav a {
   padding: 0 .5em;
+  text-transform: uppercase;
 }
 
 nav a {
@@ -61,6 +62,15 @@ nav a:hover {
 .resume-btn {
   background-color: white;
   margin: 0 .3em 0 0;
+}
+
+.resume-btn a {
+  color: #00abf0;
+  text-transform: uppercase;
+}
+
+.resume-btn a:hover {
+  color: #00abf0;
 }
 
 .resume-btn:active {
