@@ -1,13 +1,21 @@
 <template>
   <div class="home">
-    <h2>Home Page</h2>
-    <home-comp />
+    <Suspense>
+      <template #default>
+        <home-comp />
+      </template>
+      <template #fallback>
+        <div class="spin-img">
+          <img :src=spinner />
+        </div>
+      </template>
+    </Suspense>
     <about-comp />
     <projects-comp />
     <education-comp />
     <work-comp />
     <testimonial-comp />
-    <contact-comp></contact-comp>
+    <contact-comp />
     <footer-comp />
   </div>
 </template>
@@ -31,11 +39,18 @@ export default {
     WorkComp,
     TestimonialComp,
     ContactComp,
-    FooterComp
+    FooterComp,
+  },
+  data() {
+    return {
+      spinner: 'https://www.msha.gov/sites/default/files/images/loading2.gif'
+    }
   }
 }
 </script>
 
 <style>
-  
+  .spin-img {
+    min-height: 95vh;
+  }
 </style>
