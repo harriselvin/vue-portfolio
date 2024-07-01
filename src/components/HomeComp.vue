@@ -1,14 +1,16 @@
 <template>
   <div id="home">
     <h4>Home Component</h4>
+    <spinner-comp/>
   </div>
 </template>
 
 <script>
+import SpinnerComp from '@/components/SpinnerComp.vue'
+
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
+  components: {
+    SpinnerComp
   }
 }
 </script>
