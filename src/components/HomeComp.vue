@@ -135,7 +135,7 @@ export default {
     color: white;
   }
 
-  @media only screen and (min-width: 598px) and (max-width: 750px) {
+  @media only screen and (min-width: 598px) and (max-width: 850px) {
     .btn {
       display: none;
     }

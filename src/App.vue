@@ -38,6 +38,7 @@ export default {
   background-color: #00abf0;
   margin: 0;
   min-width: 100%;
+  overflow-x: hidden;
 }
 
 nav {
@@ -93,6 +94,10 @@ svg {
   color: white;
 }
 
+.offcanvas-header {
+  margin-left: 1em;
+}
+
 .offcanvas-body {
   background-color: #00abf0 !important;
 }
@@ -123,7 +128,7 @@ svg {
   border: 1px solid white;
 }
 
-@media only screen and (min-width: 500px) and (max-width: 750px) {
+@media only screen and (min-width: 500px) and (max-width: 850px) {
   .desktop-nav {
     display: none;
   }

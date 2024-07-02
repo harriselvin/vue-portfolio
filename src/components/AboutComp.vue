@@ -50,7 +50,7 @@ export default {
         return this.getItems
     }
 }
-</script>
+</script> 
 <style scoped>
     #about {
         min-height: 100vh;
