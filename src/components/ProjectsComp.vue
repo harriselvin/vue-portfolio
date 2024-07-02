@@ -1,6 +1,6 @@
 <template>
     <div id="projects">
-        <h4>Projects Component</h4>
+        <div class="project-comp">Projects Component</div>
     </div>
 </template>
 <script>
@@ -11,5 +11,8 @@ export default {
 <style>
     #projects {
         min-height: 100vh;
+    }
+    .project-comp {
+        padding-top: max(4em, 6em);
     }
 </style>

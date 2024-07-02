@@ -1,6 +1,6 @@
 <template>
-    <div id="testimonials">
-        <div class="test-comp">Testimonial Component</div>
+    <div id="skills">
+        <div class="skill-comp">Skills Component</div>
     </div>
 </template>
 <script>
@@ -9,10 +9,10 @@ export default {
 }
 </script>
 <style>
-    #testimonials {
+    #skills {
         min-height: 100vh;
     }
-    .test-comp {
+    .skill-comp {
         padding-top: max(4em, 6em);
     }
 </style>

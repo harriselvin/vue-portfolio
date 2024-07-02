@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import AboutComp from '@/components/AboutComp.vue'
+import SkillsComp from '@/components/SkillsComp.vue'
 import ProjectsComp from '@/components/ProjectsComp.vue';
 import EducationComp from '@/components/EducationComp.vue';
 import WorkComp from '@/components/WorkComp.vue';
@@ -17,6 +18,11 @@ const routes = [
     path: '/about',
     name: 'about',
     component: AboutComp
+  },
+  {
+    path: '/skills',
+    name: 'skills',
+    component: SkillsComp
   },
   {
     path: '/projects',

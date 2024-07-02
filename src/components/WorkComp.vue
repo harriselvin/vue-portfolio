@@ -1,6 +1,6 @@
 <template>
     <div id="work">
-        <h4>Work Component</h4>
+        <div class="work-comp">Work Component</div>
     </div>
 </template>
 <script>
@@ -11,5 +11,8 @@ export default {
 <style>
     #work {
         min-height: 100vh;
+    }
+    .work-comp {
+        padding-top: max(4em, 6em);
     }
 </style>

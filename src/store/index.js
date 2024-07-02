@@ -31,8 +31,8 @@ export default createStore({
     }
   },
   actions: {
-    async getItem({commit}) {
-      let data = await axios.get('https://harriselvin.github.io/first_api/data/data.json')
+    async getItems({commit}) {
+      let {data} = await axios.get('https://harriselvin.github.io/first_api/data/data.json')
       let {aboutMe, projects, education, skills, workExp, testimonials} = data
 
       commit('setAboutMe', aboutMe)
