@@ -11,6 +11,7 @@
       </template>
     </Suspense>
     <about-comp />
+    <skills-comp />
     <projects-comp />
     <education-comp />
     <work-comp />
@@ -24,6 +25,7 @@
 // @ is an alias to /src
 import HomeComp from '@/components/HomeComp.vue'
 import AboutComp from '@/components/AboutComp.vue'
+import SkillsComp from '@/components/SkillsComp.vue'
 import ProjectsComp from '@/components/ProjectsComp.vue'
 import EducationComp from '@/components/EducationComp.vue'
 import WorkComp from '@/components/WorkComp.vue'
@@ -34,6 +36,7 @@ export default {
   components: {
     HomeComp,
     AboutComp,
+    SkillsComp,
     ProjectsComp,
     EducationComp,
     WorkComp,

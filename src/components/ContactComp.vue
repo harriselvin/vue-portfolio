@@ -1,6 +1,6 @@
 <template>
     <div id="contact">
-        <h4>Contact Component</h4>
+        <div class="contact-comp">Contact Component</div>
     </div>
 </template>
 <script>
@@ -11,5 +11,8 @@ export default {
 <style>
     #contact {
         min-height: 100vh;
+    }
+    .contact-comp {
+        padding-top: max(4em, 6em);
     }
 </style>

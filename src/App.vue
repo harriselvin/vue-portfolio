@@ -42,6 +42,7 @@ export default {
 
 nav {
   background-color: #00abf0 !important;
+  transition: .5s;
 }
 
 nav a {
@@ -53,10 +54,12 @@ nav a {
   color: white !important;
   font-weight: 300;
   text-decoration: none;
+  transition: .5s;
 }
 
-nav a:hover {
-  scale: 1.1;
+.container  a:hover {
+  text-decoration: underline;
+  transition: .5s;
 }
 
 .resume-btn {
@@ -71,6 +74,7 @@ nav a:hover {
 
 .resume-btn a:hover {
   color: #00abf0;
+  text-decoration: none;
 }
 
 .resume-btn:active {

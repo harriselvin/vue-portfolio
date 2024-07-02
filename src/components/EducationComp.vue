@@ -1,6 +1,6 @@
 <template>
     <div id="education">
-        <h4>Education Component</h4>
+        <div class="edu-comp">Education Component</div>
     </div>
 </template>
 <script>
@@ -11,5 +11,8 @@ export default {
 <style>
     #education {
         min-height: 100vh;
+    }
+    .edu-comp {
+        padding-top: max(4em, 6em);
     }
 </style>
