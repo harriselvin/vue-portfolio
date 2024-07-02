@@ -10,9 +10,7 @@
           </ul>
         </div>
         <a class="cv" href="https://harriselvin.github.io/hostedImages/Links/Elvin%20Harris%20latest%20CV%202.pdf" target="_blank">
-          <button class="btn">
-            View CV
-          </button>
+          <button class="btn">View CV</button>
         </a>
       </div>
       <div class="my-image">
@@ -38,6 +36,7 @@ export default {
   #home {
     min-height: 100vh;
   }
+
   .home-container {
     display: flex;
     flex-wrap: wrap;
@@ -45,25 +44,32 @@ export default {
     align-items: center;
     height: 90vh;
   }
+
   .title {
     text-align: left;
     margin: 0 2em;
     display: flex;
     flex-direction: column;
   }
+
   .title .name {
     display: flex;
     text-transform: uppercase;
   }
+
   .my-image img {
     height: clamp(15em, 25vw, 20em);
     border-radius: 50%;
     border: 2px solid black;
     box-shadow: 0 .2em .5em black;
   }
+
   .h3 {
     display: inline-flex;
+    font-size: max(1em, 2.5cqi);
   }
+
+
   .dynamic-text {
     line-height: 39px;
     height: 1.18em;
@@ -97,7 +103,7 @@ export default {
     content: "";
     position: absolute;
     left: 0;
-    height: 100%;
+    height: 110%;
     width: 100%;
     background: white;
     border-left: 2px solid #00abf0;
@@ -129,7 +135,26 @@ export default {
     color: white;
   }
 
-  @media only screen and (max-width: 597px) {
+  @media only screen and (min-width: 598px) and (max-width: 750px) {
+    .btn {
+      display: none;
+    }
+    
+    .dynamic-text {
+      line-height: 50px;
+      height: 1.4em;
+    }
+
+    .dynamic-text li {
+      margin-top: -.70em;
+    }
+
+    .dynamic-text li .title-text::after {
+      height: 180%;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
     .title {
       order: 1;
       text-align: center;
@@ -142,9 +167,22 @@ export default {
     }
   }
 
-  @media only screen and (min-width: 598px) and (max-width: 750px) {
+  @media screen and (max-width: 596px) and (min-width: 301px) {
     .btn {
       display: none;
+    }
+
+    .dynamic-text {
+      line-height: 50px;
+      height: 1.5em;
+    }
+
+    .dynamic-text li {
+      margin-top: -.75em;
+    }
+
+    .dynamic-text li .title-text::after {
+      height: 180%;
     }
   }
 </style>
