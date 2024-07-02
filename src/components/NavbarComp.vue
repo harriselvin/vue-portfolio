@@ -18,6 +18,9 @@
         <div class="resume-btn">
             <a href="https://digital-resume-psi.vercel.app/" target="_blank" class="btn">Digital Resume</a>
         </div>
+        <div>
+            <theme-comp />
+        </div>
     </div>
 
     <nav class="navbar mobile-nav sticky-top">
@@ -30,7 +33,9 @@
             </button>
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Elvin Harris</h5>
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                    <theme-comp />
+                </h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
@@ -98,8 +103,11 @@
     </nav>
 </template>
 <script>
+import ThemeComp from './ThemeComp.vue';
 export default {
-    
+    components: {
+        ThemeComp
+    }
 }
 </script>
 <style>
