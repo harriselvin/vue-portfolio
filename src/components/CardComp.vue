@@ -7,7 +7,11 @@
             <slot name="educationSlot"></slot>
         </div>
         <div v-else-if="typeof skills == 'object'">
-            <slot name="skillSlot"></slot>
+            <slot name="skillSlot">
+                <p>Skills.name</p>
+                <p>Skills.image</p>
+                <p>Skills.link</p>
+            </slot>
         </div>
         <div v-else-if="typeof workEp == 'object'">
             <slot name="workSlot"></slot>

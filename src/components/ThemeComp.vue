@@ -1,5 +1,5 @@
 <template>
-    <div class="switcher">
+    <div class="switcher" @input="changeTheme()">
         <label id="theme-toggle-button">
         <input type="checkbox" id="toggle">
         <svg viewBox="0 0 69.667 44" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
@@ -60,24 +60,11 @@
     </div>
 </template>
 <script>
-/* eslint-disable */
-import { useDark, useToggle } from '@vueuse/core'
-
 export default {
-    data() {
-        
-    },
     methods: {
-        toggleItems() {
-            const isDark = useDark({
-                selector: 'body',
-                attribute: 'color-scheme',
-                valueDark: 'dark',
-                valueLight: 'light'
-            })
-            const toggleDark = useToggle(isDark)
-
-            console.log(toggleDark);
+        changeTheme() {
+            let theme = document.body
+            theme.dataset.bsTheme = theme.dataset.bsTheme == 'light' ? 'dark' : 'light'
         }
     }
 }
