@@ -5,8 +5,8 @@
         <h1>Hi, I'm <span class="name">Elvin Harris</span></h1>
         <div class="h3">I am a 
           <ul class="dynamic-text">
-            <li><span class="title-text sd">Software Developer</span></li>
-            <li><span class="title-text ui">UI/UX Designer</span></li>
+            <li><span class="title-text item sd">Software Developer</span></li>
+            <li><span class="title-text item ui">UI/UX Designer</span></li>
           </ul>
         </div>
         <a class="cv" href="https://harriselvin.github.io/hostedImages/Links/Elvin%20Harris%20latest%20CV%202.pdf" target="_blank">
@@ -27,7 +27,7 @@ import SpinnerComp from '@/components/SpinnerComp.vue'
 export default {
   components: {
     SpinnerComp
-  }
+  },
 }
 </script>
 
@@ -86,6 +86,10 @@ export default {
   }
 
   .title-text {
+    --white-bg: white;
+  }
+
+  .title-text {
     color: #00abf0;
   }
 
@@ -105,7 +109,7 @@ export default {
     left: 0;
     height: 110%;
     width: 100%;
-    background: white;
+    background: var(--white-bg, white);
     border-left: 2px solid #00abf0;
     animation: typing 3s steps(10) infinite;
   }

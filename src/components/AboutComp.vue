@@ -1,7 +1,7 @@
 <template>
     <div id="about">
         <div class="about-comp">
-            <h2 class="about">About</h2>
+            <h2 class="about">About Me</h2>
             <div class="about-title">
                 <h2>Elvin Harris</h2>
                 <div class="about-info">

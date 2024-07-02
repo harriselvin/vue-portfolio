@@ -1,7 +1,5 @@
 <template>
-    <div class="spinner">
-        
-    </div>
+    <div class="spinner"></div>
 </template>
 <script>
 const getInfo = async () => {
