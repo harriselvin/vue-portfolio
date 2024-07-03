@@ -1,5 +1,5 @@
 <template>
-    <div id="about">
+    <div id="about" data-aos="zoom-out-left">
         <div class="about-comp">
             <h2 class="about">About Me</h2>
             <div class="about-title">

@@ -1,5 +1,7 @@
 <template>
-    <div id="work">
+    <div id="work" data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
         <div class="work-comp">Work Component</div>
     </div>
 </template>

@@ -1,5 +1,5 @@
 <template>
-    <div id="skills">
+    <div id="skills" data-aos="fade-right">
         <div class="skill-comp">
             <div class="skills-title">
                 <h2>Skills</h2>
@@ -59,7 +59,6 @@ export default {
         width: 80%;
         margin: 0 auto;
     }
-
     .skills * {
         width: 50%;
     }

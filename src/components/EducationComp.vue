@@ -1,5 +1,6 @@
 <template>
-    <div id="education">
+    <div id="education" data-aos="fade-up"
+    data-aos-duration="3000">
         <div class="edu-comp">Education Component</div>
     </div>
 </template>
