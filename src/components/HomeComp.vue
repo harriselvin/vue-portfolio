@@ -35,6 +35,7 @@ export default {
 <style scoped>
   #home {
     min-height: 100vh;
+    overflow-x: hidden;
   }
 
   .home-container {
@@ -60,7 +61,7 @@ export default {
   .my-image img {
     height: clamp(15em, 25vw, 20em);
     border-radius: 50%;
-    border: 2px solid ;
+    border: 2px solid black;
     box-shadow: 0 .2em .5em black;
   }
 
@@ -68,6 +69,7 @@ export default {
     display: inline-flex;
     font-size: max(1em, 2.5cqi);
   }
+
 
   .dynamic-text {
     line-height: 39px;
@@ -84,6 +86,14 @@ export default {
     animation: slide 6s steps(2) infinite;
   }
 
+  .title-text {
+    --white-bg: white;
+  }
+
+  .title-text {
+    color: #00abf0;
+  }
+
   @keyframes slide {
     100% {
       top: -80px;
@@ -92,7 +102,6 @@ export default {
 
   .dynamic-text li .title-text {
     position: relative;
-    color: #00abf0;
   }
 
   .dynamic-text li .title-text::after {
@@ -101,19 +110,9 @@ export default {
     left: 0;
     height: 110%;
     width: 100%;
+    background: var(--white-bg, white);
     border-left: 2px solid #00abf0;
-    border: px solid;
-    animation: typing 3s steps(20) infinite;
-  }
-
-  /* Light mode styles */
-  [data-bs-theme='light'] .dynamic-text li .title-text::after {
-    background-color: white;
-  }
-
-  /* Dark mode styles */
-  [data-bs-theme='dark'] .dynamic-text li .title-text::after {
-    background-color: #212529;
+    animation: typing 3s steps(10) infinite;
   }
 
   @keyframes typing {
