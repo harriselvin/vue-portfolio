@@ -72,6 +72,7 @@ export default {
 <style>
     .switcher {
         margin: 0 -3em;
+        overflow-x: hidden;
     }
     /* The switch - the box around the slider */
     #theme-toggle-button {

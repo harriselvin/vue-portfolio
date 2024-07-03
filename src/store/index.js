@@ -6,7 +6,8 @@ export default createStore({
     aboutMe: null,
     projects: null,
     education: null,
-    skills: null,
+    techSkills: null,
+    softSkills: null,
     workExp: null,
     testimonials: null,
   },
@@ -20,8 +21,11 @@ export default createStore({
     setEducation(state, payload) {
       state.education = payload
     },
-    setSkills(state, payload) {
-      state.skills = payload
+    setTechSkills(state, payload) {
+      state.techSkills = payload
+    },
+    setSoftSkills(state, payload) {
+      state.softSkills = payload
     },
     setWorkExp(state, payload) {
       state.workExp = payload
@@ -33,12 +37,13 @@ export default createStore({
   actions: {
     async getItems({commit}) {
       let {data} = await axios.get('https://harriselvin.github.io/first_api/data/data.json')
-      let {aboutMe, projects, education, skills, workExp, testimonials} = data
+      let {aboutMe, projects, education, techSkills, softSkills, workExp, testimonials} = data
 
       commit('setAboutMe', aboutMe)
       commit('setProjects', projects)
       commit('setEducation', education)
-      commit('setSkills', skills)
+      commit('setTechSkills', techSkills)
+      commit('setSoftSkills', softSkills)
       commit('setWorkExp', workExp)
       commit('setTestimonials', testimonials)
     }

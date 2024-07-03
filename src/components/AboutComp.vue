@@ -54,6 +54,7 @@ export default {
 <style scoped>
     #about {
         min-height: 100vh;
+        overflow-x: hidden;
     }
     .about-comp {
         padding-top: max(4em, 6em);

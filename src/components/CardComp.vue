@@ -1,16 +1,22 @@
 <template>
-    <div>
+    <div class="slots">
         <div v-if="typeof projects == 'object'">
             <slot name="projectSlot"></slot>
         </div>
         <div v-else-if="typeof education == 'object'">
             <slot name="educationSlot"></slot>
         </div>
-        <div v-else-if="typeof skills == 'object'">
-            <slot name="skillSlot">
+        <div v-else-if="typeof techSkills == 'object'">
+            <slot name="techSkillSlot">
                 <p>Skills.name</p>
                 <p>Skills.image</p>
                 <p>Skills.link</p>
+            </slot>
+        </div>
+        <div v-else-if="typeof softSkills == 'object'">
+            <slot name="softSkillSlot">
+                <p>Skills.name</p>
+                <p>Skills.image</p>
             </slot>
         </div>
         <div v-else-if="typeof workEp == 'object'">
@@ -28,9 +34,11 @@
 </template>
 <script>
 export default {
-    props: ['aboutMe', 'projects', 'education', "skills", 'workEp', 'testmonials']
+    props: ['aboutMe', 'projects', 'education', "techSkills", "softSkills", 'workEp', 'testmonials']
 }
 </script>
 <style>
-    
+    .slots {
+        overflow-x: hidden;
+    }
 </style>
