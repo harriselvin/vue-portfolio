@@ -27,7 +27,7 @@
                 <p>Skills.image</p>
             </slot>
         </div>
-        <div v-else-if="typeof workEp == 'object'">
+        <div v-else-if="typeof workExp == 'object'">
             <slot name="workSlot"></slot>
         </div>
         <div v-else-if="typeof testmonials == 'object'">
@@ -42,7 +42,7 @@
 </template>
 <script>
 export default {
-    props: ['aboutMe', 'projects', 'education', "techSkills", "softSkills", 'workEp', 'testmonials']
+    props: ['aboutMe', 'projects', 'education', "techSkills", "softSkills", 'workExp', 'testmonials']
 }
 </script>
 <style>

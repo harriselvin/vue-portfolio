@@ -23,12 +23,12 @@
                                     <div class="edu-desc">
                                         {{ edu.description }}
                                     </div>
+                                    <div class="edu-year">
+                                        <p>Year: {{ edu.year }}</p>
+                                    </div>
                                     <div class="edu-contact">
                                         <p>Contact Person: {{ edu.contact[0].name }}</p>
                                         <p>Contact Details: {{ edu.contact[0].contactDetails }}</p>
-                                    </div>
-                                    <div class="edu-year">
-                                        Year: {{ edu.year }}
                                     </div>
                                 </div>
                                 </div>
@@ -88,6 +88,7 @@ export default {
         justify-content: center;
         align-items: center;
         background: #00abf0 !important;
+        border-radius: 3px 3px 0 0;
     }
     .edu-content {
         backdrop-filter: blur(3px);
