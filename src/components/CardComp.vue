@@ -8,7 +8,11 @@
             </slot>
         </div>
         <div v-else-if="typeof education == 'object'">
-            <slot name="educationSlot"></slot>
+            <slot name="educationSlot">
+                <p>projects.description</p>
+                <p>projects.year</p>
+                <p>projects.institution</p>
+            </slot>
         </div>
         <div v-else-if="typeof techSkills == 'object'">
             <slot name="techSkillSlot">
