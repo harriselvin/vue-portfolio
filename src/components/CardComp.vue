@@ -1,7 +1,11 @@
 <template>
     <div class="slots">
         <div v-if="typeof projects == 'object'">
-            <slot name="projectSlot"></slot>
+            <slot name="projectSlot">
+                <p>projects.name</p>
+                <p>projects.description</p>
+                <p>projects.image</p>
+            </slot>
         </div>
         <div v-else-if="typeof education == 'object'">
             <slot name="educationSlot"></slot>

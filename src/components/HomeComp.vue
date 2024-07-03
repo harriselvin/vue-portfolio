@@ -115,6 +115,15 @@ export default {
     animation: typing 3s steps(10) infinite;
   }
 
+  /* Light mode styles */
+  [data-bs-theme='light'] .dynamic-text li .title-text::after {
+    background-color: white;
+  }
+  /* Dark mode styles */
+  [data-bs-theme='dark'] .dynamic-text li .title-text::after {
+    background-color: #212529;
+  }
+
   @keyframes typing {
     100% {
       left: 100%;
