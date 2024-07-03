@@ -1,5 +1,5 @@
 <template>
-    <div id="projects">
+    <div id="projects" data-aos="zoom-out">
         <div class="project-comp">Projects Component</div>
     </div>
 </template>

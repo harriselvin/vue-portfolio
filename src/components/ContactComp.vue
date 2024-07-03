@@ -1,5 +1,5 @@
 <template>
-    <div id="contact">
+    <div id="contact" data-aos="zoom-in-up">
         <div class="contact-comp">Contact Component</div>
     </div>
 </template>
