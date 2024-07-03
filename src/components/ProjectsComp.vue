@@ -62,12 +62,13 @@ export default {
         padding-top: max(4em, 6em);
     }
     .pro-sec {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(18em, 100%), 1fr));
     }
     .projects {
       margin: 0 auto;
-      border: 2px solid;
+      border-top: 2px solid;
+      border-bottom: 2px solid;
       margin: 1em auto;
     }
     .pro-box {
@@ -79,12 +80,16 @@ export default {
       height: 100%;
       width: 100%;
       object-fit: cover;
+      border-right: 2px solid;
+      border-left: 2px solid;
     }
     .pro-name {
-      border-top: 1px solid;
+      border-top: 2px solid;
     }
     .links {
       display: flex;
+      border-right: 2px solid;
+      border-left: 2px solid;
     }
     .links a{
       width: 100%;

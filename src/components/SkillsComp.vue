@@ -87,8 +87,8 @@ export default {
         filter: grayscale(0);
     }
     .skill-sec {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(10em, 100%), 1fr));
     }
     .skills * {
         width: 100%;
