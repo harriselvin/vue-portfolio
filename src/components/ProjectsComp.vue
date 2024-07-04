@@ -56,7 +56,7 @@ export default {
 </script>
 <style>
     #projects {
-        min-height: 100vh;
+        min-height: 100svh;
     }
     .project-comp {
         padding-top: max(4em, 6em);

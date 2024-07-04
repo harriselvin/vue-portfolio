@@ -74,7 +74,7 @@ export default {
 </script>
 <style>
     #testimonials {
-        min-height: 100vh;
+        min-height: 100svh;
     }
     .test-comp {
         padding-top: max(4em, 6em);

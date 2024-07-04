@@ -111,5 +111,7 @@ export default {
 }
 </script>
 <style>
-    
+    nav {
+        overflow-x: hidden;
+    }
 </style>

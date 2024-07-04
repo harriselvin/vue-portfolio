@@ -19,6 +19,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
 }
 
 .logo img {
@@ -38,6 +39,7 @@ export default {
   margin: 0;
   min-width: 100%;
   overflow-x: hidden;
+  position: fixed;
 }
 
 nav {
@@ -133,6 +135,8 @@ svg {
   }
   .mobile-nav {
     display: block;
+    position: fixed;
+    width: 100%;
   }
 }
 @media only screen and (min-width: 301px) and (max-width: 500px) {
@@ -141,6 +145,8 @@ svg {
   }
   .mobile-nav {
     display: block;
+    position: fixed;
+    width: 100%;
   }
 }
 
@@ -150,6 +156,8 @@ svg {
   }
   .mobile-nav {
     display: block;
+    position: fixed;
+    width: 100%;
   }
 }
 </style>
