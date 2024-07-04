@@ -36,13 +36,23 @@
                             <h4 class="message">Send me a message</h4>
                         </div>
                         <!-- The form takes a while to send. Please be patient -->
-                        <form action="https://formsubmit.co/harriselvin6@gmail.com" method="POST" enctype="multipart/form-data">
-                            <input class="form-control form-control-lg" name="full_name" type="text" placeholder="Full name*" aria-label=".form-control-lg example" v-model="name" required>
-                            <input class="form-control form-control-lg" type="email" placeholder="Email address*" name="email" aria-label=".form-control-lg example" v-model="email" required>
+                        <form @submit="formSubmit()" action="https://formsubmit.co/harriselvin6@gmail.com" method="POST" enctype="multipart/form-data">
+                            <p v-if="errors.length">
+                                <b>
+                                    Please correct the following error(s):
+                                </b>
+                                <ul>
+                                    <li v-for="error in errors" :key="error">
+                                        {{ error }}
+                                    </li>
+                                </ul>
+                            </p>
+                            <input class="form-control form-control-lg" name="name" type="text" placeholder="Full name*" aria-label=".form-control-lg example" v-model="name">
+                            <input class="form-control form-control-lg" type="email" placeholder="Email address*" name="email" aria-label=".form-control-lg example" v-model="email">
                             <input class="form-control form-control-lg" name="subject" type="text" placeholder="Subject" aria-label=".form-control-lg example" v-model="subject">
                             <div class="mb-3 text-area">
                                 <label for="exampleFormControlTextarea1" class="form-label">Message*</label>
-                                <textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="3" v-model="message" required></textarea>
+                                <textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="3" v-model="message"></textarea>
                             </div>
                             <button class="btn btn-primary" type="submit">Send</button>
                         </form>
@@ -61,21 +71,49 @@ export default {
             email: '',
             subject: '',
             message: '',
+            errors: [],
         }
     },
     methods: {
         formSubmit() {
-            Swal.fire({
-                title: "Thanks!",
-                text: "Your message was sent!",
-                icon: "success"
-            });
-            console.log('Message has been sent');
-            this.name = ''
-            this.email = ''
-            this.subject = ''
-            this.message = ''
+            this.errors = [];
+
+            if(this.name && this.email && this.message) return true;
+            if(!this.name) {
+                this.errors.push("Name required.");
+            }
+            if(!this.email) {
+                this.errors.push("Email required.");
+            } else if (!this.validEmail(this.email)) {
+                this.errors.push("Valid email required")
+            }
+            if(!this.message) {
+                this.errors.push("Message required.");
+            }
+            // e.preventDefault();
+
+            if (this.errors.length) {
+                // No errors, proceed with form submission
+                this.$refs.form.submit()
+
+                Swal.fire({
+                    title: "Thanks!",
+                    text: "Your message was sent!",
+                    icon: "success"
+                });
+
+                console.log('Message has been sent');
+                this.name = ''
+                this.email = ''
+                this.subject = ''
+                this.message = ''
+            }
         },
+        validEmail(email) {
+            /* eslint-disable */
+            let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@(([^<>()\[\]\\.,;:\s@"]+\.)+[^<>()\[\]\\.,;:\s@"]{2,})$/i;
+            return re.test(email)
+        }
     }
 }
 </script>
