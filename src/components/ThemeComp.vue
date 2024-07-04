@@ -5,7 +5,6 @@
         <svg viewBox="0 0 69.667 44" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
             <g transform="translate(3.5 3.5)" data-name="Component 15 – 1" id="Component_15_1">
             
-            
             <g filter="url(#container)" transform="matrix(1, 0, 0, 1, -3.5, -3.5)">
                 <rect fill="#83cbd8" transform="translate(3.5 3.5)" rx="17.5" height="35" width="60.667" data-name="container" id="container"></rect>
             </g>
