@@ -54,6 +54,10 @@ export default {
 
 <style>
   .spin-img {
-    min-height: 95vh;
+    min-height: 80svh;
+    margin: 6em 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 </style>

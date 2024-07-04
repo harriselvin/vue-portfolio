@@ -144,5 +144,4 @@ export default {
     #toggle:checked + svg #stars {
         opacity: 1;
     }
-
 </style>
