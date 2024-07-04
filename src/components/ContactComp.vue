@@ -35,6 +35,7 @@
                         <div class="form-heading">
                             <h4 class="message">Send me a message</h4>
                         </div>
+                        <!-- The form takes a while to send. Please be patient -->
                         <form action="https://formsubmit.co/harriselvin6@gmail.com" method="POST" enctype="multipart/form-data">
                             <input class="form-control form-control-lg" name="full_name" type="text" placeholder="Full name*" aria-label=".form-control-lg example" v-model="name" required>
                             <input class="form-control form-control-lg" type="email" placeholder="Email address*" name="email" aria-label=".form-control-lg example" v-model="email" required>
@@ -64,15 +65,16 @@ export default {
     },
     methods: {
         formSubmit() {
-            this.name = ''
-            this.email = ''
-            this.subject = ''
-            this.message = ''
             Swal.fire({
                 title: "Thanks!",
                 text: "Your message was sent!",
                 icon: "success"
             });
+            console.log('Message has been sent');
+            this.name = ''
+            this.email = ''
+            this.subject = ''
+            this.message = ''
         },
     }
 }
@@ -80,6 +82,7 @@ export default {
 <style>
     #contact {
         min-height: 100svh;
+        margin: 0 0 2em;
     }
     .contact-comp {
         padding-top: max(4em, 6em);
@@ -113,6 +116,9 @@ export default {
     } 
     .mail-me {
         text-align: left;
+    }
+    .contact-mobile {
+        margin-left: -9em;
     }
     .contact-mobile svg {
         height: 2em;
@@ -176,9 +182,14 @@ export default {
     }
     .form form .btn {
         width: 100%;
-        box-shadow: 1px 1px 5px 1px black;
         background-color: #00abf0;
         font-size: 11px;
+    }
+    [data-bs-theme="light"] .form form .btn {
+        box-shadow: 1px 1px 5px 1px black;
+    }
+    [data-bs-theme="dark"] .form form .btn {
+        box-shadow: 1px 1px 5px 1px white;
     }
     .form form .btn:hover {
         background-color: #008bf0;

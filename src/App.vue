@@ -40,6 +40,7 @@ export default {
   min-width: 100%;
   overflow-x: hidden;
   position: fixed;
+  box-shadow: 1px 1px 5px 1px;
 }
 
 nav {
@@ -137,6 +138,7 @@ svg {
     display: block;
     position: fixed;
     width: 100%;
+    box-shadow: 1px 1px 5px 1px;
   }
 }
 @media only screen and (min-width: 301px) and (max-width: 500px) {
@@ -147,6 +149,7 @@ svg {
     display: block;
     position: fixed;
     width: 100%;
+    box-shadow: 1px 1px 5px 1px;
   }
 }
 
@@ -158,6 +161,7 @@ svg {
     display: block;
     position: fixed;
     width: 100%;
+    box-shadow: 1px 1px 5px 1px;
   }
 }
 </style>
