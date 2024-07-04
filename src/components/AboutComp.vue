@@ -80,4 +80,11 @@ export default {
         color: #00abf0;
         height: 1.5em;
     }
+
+    @media only screen and (max-width: 500px) {
+        #about {
+            min-height: 50svh;
+            overflow-x: hidden;
+        }
+    }
 </style>

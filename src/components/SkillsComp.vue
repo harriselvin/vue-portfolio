@@ -69,7 +69,7 @@ export default {
 </script>
 <style>
     #skills {
-        min-height: 100vh;
+        min-height: 100svh;
         overflow-x: hidden;
     }
     .skill-comp {
