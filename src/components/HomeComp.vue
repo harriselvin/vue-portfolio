@@ -212,7 +212,7 @@ export default {
     }
   }
 
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 533px) {
     .title {
       order: 1;
       text-align: center;
