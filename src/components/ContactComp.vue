@@ -63,7 +63,6 @@
     </div>
 </template>
 <script>
-import Swal from 'sweetalert2'
 export default {
     data() {
         return {
@@ -95,12 +94,6 @@ export default {
             if (this.errors.length) {
                 // No errors, proceed with form submission
                 this.$refs.form.submit()
-
-                Swal.fire({
-                    title: "Thanks!",
-                    text: "Your message was sent!",
-                    icon: "success"
-                });
 
                 console.log('Message has been sent');
                 this.name = ''

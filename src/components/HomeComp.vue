@@ -70,7 +70,7 @@ export default {
   }
 
   .my-image img {
-    height: clamp(15em, 25vw, 20em);
+    height: clamp(10em, 25vw, 20em);
     border-radius: 50%;
     border: 2px solid;
     box-shadow: 0 .2em .5em;
@@ -78,7 +78,8 @@ export default {
 
   .social-links {
     display: flex;
-    margin: 20% 50px 0 50px;
+    justify-content: center;
+    margin: 20% 30px 0 0;
   }
 
   .social-links .item-1 {
@@ -132,9 +133,6 @@ export default {
 
   .title-text {
     --white-bg: white;
-  }
-
-  .title-text {
     color: #00abf0;
   }
 
@@ -213,6 +211,11 @@ export default {
   }
 
   @media only screen and (max-width: 533px) {
+    .social-links {
+      display: flex;
+      margin: 20% 50px 0 0;
+    }
+    
     .title {
       order: 1;
       text-align: center;
@@ -226,6 +229,32 @@ export default {
   }
 
   @media screen and (max-width: 596px) and (min-width: 301px) {
+    .home-container {
+      margin-top: 5em;
+    }
+    
+    .btn {
+      display: none;
+    }
+
+    .dynamic-text {
+      line-height: 50px;
+      height: 1.5em;
+    }
+
+    .dynamic-text li {
+      margin-top: -.75em;
+    }
+
+    .dynamic-text li .title-text::after {
+      height: 180%;
+    }
+  }
+  @media screen and (max-width: 300px) {
+    .home-container {
+      margin-top: 5em;
+    }
+
     .btn {
       display: none;
     }

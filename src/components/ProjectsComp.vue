@@ -60,10 +60,11 @@ export default {
     }
     .project-comp {
         padding-top: max(4em, 6em);
+        margin: 0 10cqi;
     }
     .pro-sec {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(min(18em, 100%), 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(15em, 100%), 1fr));
     }
     .projects {
       margin: 0 auto;
@@ -73,7 +74,7 @@ export default {
     }
     .pro-box {
       flex-wrap: wrap;
-      width: 16em;
+      width: clamp(10em, 85vw, 15em);
       height: 15em;
     }
     .pro-box img {

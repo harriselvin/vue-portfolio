@@ -78,6 +78,7 @@ export default {
     }
     .test-comp {
         padding-top: max(4em, 6em);
+        margin: 0 10cqi;
     }
     .test-sec {
         display: grid;
