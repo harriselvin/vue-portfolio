@@ -7,8 +7,8 @@
             <div>
                 <h4>Tech Skills</h4>
             </div>
-            <div class="skill-sec">
-                <div class="skills" v-for="techSkill in techSkills()" :key="techSkill">
+            <div class="skill-sec tech">
+                <div class="tech-skills" v-for="techSkill in techSkills()" :key="techSkill">
                     <card-comp :techSkills="techSkill">
                         <template #techSkillSlot>
                             <div class="skill-items">
@@ -26,8 +26,8 @@
             <div>
                 <h4>Soft Skills</h4>
             </div>
-            <div class="skill-sec">
-                <div class="skills" v-for="softSkill in softSkills()" :key="softSkill">
+            <div class="skill-sec soft">
+                <div class="soft-skills" v-for="softSkill in softSkills()" :key="softSkill">
                     <card-comp :softSkills="softSkill">
                         <template #softSkillSlot>
                             <div class="skill-items">
@@ -74,23 +74,38 @@ export default {
     }
     .skill-comp {
         padding-top: max(4em, 6em);
+        margin: 0 10cqi;
     }
     .skills-title h2 {
         text-transform: uppercase;
         margin: 0 0 1em;
     }
-    .skills {
+    .tech-skills {
+        border: 2px solid;
+        width: 8.5em;
+        min-width: 5em;
+        margin: 2em auto;
+        filter: grayscale(0);
+    }
+    .soft-skills {
         border: 2px solid;
         width: 10em;
         min-width: 5em;
         margin: 2em auto;
         filter: grayscale(0);
     }
-    .skill-sec {
+    .tech {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(8em, 100%), 1fr));
+    }
+    .soft {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(min(10em, 100%), 1fr));
     }
-    .skills * {
+    .tech-skills * {
+        width: 100%;
+    }
+    .soft-skills * {
         width: 100%;
     }
     .skill-name {

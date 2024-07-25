@@ -13,24 +13,22 @@
                                 <div class="edu-heading">
                                     {{ edu.institution }}
                                 </div>
-                                <div :style="{
-                                    backgroundImage:`url(${edu.icon})`,
-                                    backgroundRepeat: 'no-repeat',
-                                    backgroundSize: 'cover',
-                                    height: '12em',
-                                }"> 
-                                <div class="edu-content">
-                                    <div class="edu-desc">
-                                        {{ edu.description }}
-                                    </div>
-                                    <div class="edu-year">
-                                        <p>Year: {{ edu.year }}</p>
-                                    </div>
-                                    <div class="edu-contact">
-                                        <p>Contact Person: {{ edu.contact[0].name }}</p>
-                                        <p>Contact Details: {{ edu.contact[0].contactDetails }}</p>
-                                    </div>
+                                <div class="image">
+                                    <img :src="edu.icon">
                                 </div>
+                                <div> 
+                                    <div class="edu-content">
+                                        <div class="edu-desc">
+                                            {{ edu.description }}
+                                        </div>
+                                        <div class="edu-year">
+                                            <p>Year: {{ edu.year }}</p>
+                                        </div>
+                                        <div class="edu-contact">
+                                            <p>Contact Person: {{ edu.contact[0].name }}</p>
+                                            <p>Contact Details: {{ edu.contact[0].contactDetails }}</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </template>
@@ -67,10 +65,11 @@ export default {
     }
     .edu-comp {
         padding-top: max(4em, 6em);
+        margin: 0 10cqi;
     }
     .edu-sec {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(min(20em, 100%), 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(min(15em, 100%), 1fr));
     }
     .edu {
         margin: 1em auto
@@ -78,29 +77,42 @@ export default {
     .edu-box {
         border: 2px solid;
         border-radius: 5px;
-        height: 15em;
-        width: 20em;
+        height: 21em;
+        width: clamp(10em, 85vw, 15em);
         overflow: hidden;
     }
     .edu-heading {
-        height: 3em;
+        height: 4em;
         display: flex;
         justify-content: center;
         align-items: center;
         background: #00abf0 !important;
         border-radius: 3px 3px 0 0;
     }
+    .image img {
+        height: 3em;
+        object-fit: cover;
+    }
     .edu-content {
-        backdrop-filter: blur(3px);
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        color: black;
-        text-shadow: 2px 2px 5px #212529;
     }
     .edu-desc {
         height: 5em;
+        padding: 1em 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .edu-year {
+        height: 3em;
+        padding-bottom: 1em;
+    }
+    .edu-contact {
+        padding-top: 1em;
+        line-height: 1em;
     }
     [data-bs-theme='light'] .edu-heading {
         background-color: black;

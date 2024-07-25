@@ -71,6 +71,7 @@ export default {
     }
     .work-comp {
         padding-top: max(4em, 6em);
+        margin: 0 10cqi;
     }
     .work-sec {
         display: grid;
@@ -82,8 +83,7 @@ export default {
     .work-box {
         border: 2px solid;
         border-radius: 5px;
-        width: 20em;
-        height: 19em;
+        width: clamp(10em, 85vw, 20em);
     }
     .work-heading {
         margin: 0 0 1em;
