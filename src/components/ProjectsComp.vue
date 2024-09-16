@@ -64,7 +64,7 @@ export default {
     }
     .pro-sec {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(min(15em, 100%), 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(16em, 100%), 1fr));
     }
     .projects {
       margin: 0 auto;

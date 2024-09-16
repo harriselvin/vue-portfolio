@@ -15,9 +15,9 @@
             <a href="#testimonials">Testimonials</a>
             <a href="#contact">Contact</a>
         </nav>
-        <div class="resume-btn">
+        <!-- <div class="resume-btn">
             <a href="https://digital-resume-psi.vercel.app/" target="_blank" class="btn">Digital Resume</a>
-        </div>
+        </div> -->
         <div>
             <theme-comp />
         </div>
@@ -94,7 +94,7 @@
                     </li>
                 </ul>
                 <div class="btn-links">
-                    <a class="btn" href="https://digital-resume-psi.vercel.app/" role="button" target="_blank">Digital Resume</a>
+                    <!-- <a class="btn" href="https://digital-resume-psi.vercel.app/" role="button" target="_blank">Digital Resume</a> -->
                     <a class="btn" href="https://harriselvin.github.io/hostedImages/Links/Elvin%20Harris%20latest%20CV%202.pdf" target="_blank" role="button">View CV</a>
                 </div>
             </div>

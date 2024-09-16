@@ -6,7 +6,7 @@
       </template>
       <template #fallback>
         <div class="spin-img">
-          <img :src=spinner />
+          <img :src="darkMode ? darkSpinner : lightSpinner" />
         </div>
       </template>
     </Suspense>
@@ -15,7 +15,7 @@
     <projects-comp />
     <education-comp />
     <work-comp />
-    <testimonial-comp />
+    <!-- <testimonial-comp /> -->
     <contact-comp />
     <footer-comp />
   </div>
@@ -29,7 +29,7 @@ import SkillsComp from '@/components/SkillsComp.vue'
 import ProjectsComp from '@/components/ProjectsComp.vue'
 import EducationComp from '@/components/EducationComp.vue'
 import WorkComp from '@/components/WorkComp.vue'
-import TestimonialComp from '@/components/TestimonialComp.vue'
+// import TestimonialComp from '@/components/TestimonialComp.vue'
 import ContactComp from '@/components/ContactComp.vue'
 import FooterComp from '@/components/FooterComp.vue'
 export default {
@@ -40,14 +40,19 @@ export default {
     ProjectsComp,
     EducationComp,
     WorkComp,
-    TestimonialComp,
+    // TestimonialComp,
     ContactComp,
     FooterComp,
   },
   data() {
     return {
-      spinner: 'https://www.msha.gov/sites/default/files/images/loading2.gif'
+      lightSpinner: 'https://www.msha.gov/sites/default/files/images/loading2.gif',
+      darkSpinner: 'https://media.tenor.com/UnFx-k_lSckAAAAM/amalie-steiness.gif',
+      darkMode: false
     }
+  },
+  toggleDarkMode() {
+    this.darkMode = !this.darkMode
   }
 }
 </script>

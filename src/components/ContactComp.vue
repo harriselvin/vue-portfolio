@@ -13,12 +13,22 @@
                             <p>Let's create something together</p>
                         </div>
                         <div class="contact-me">
-                            <div class="detail-box">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
-                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
-                                </svg>
+                            <div class="email">
+                                <div class="detail-box">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+                                    </svg>
+                                </div>
+                                <p class="mail-me">Mail me at <br><a href="mailto: harriselvin6@gmail.com">harriselvin6@gmail.com</a></p>
                             </div>
-                            <p class="mail-me">Mail me at <br><a href="mailto: harriselvin6@gmail.com">harriselvin6@gmail.com</a></p>
+                            <div class="phone">
+                                <div class="detail-box">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                                        <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+                                    </svg>
+                                </div>
+                                <p class="mail-me">Call me at <br><a href="tel: 0625355271">062 535 5271</a></p>
+                            </div>
                         </div>
                         <div class="contact-mobile">
                             <ul class="contact-links">
@@ -36,23 +46,23 @@
                             <h4 class="message">Send me a message</h4>
                         </div>
                         <!-- The form takes a while to send. Please be patient -->
-                        <form @submit="formSubmit()" action="https://formsubmit.co/harriselvin6@gmail.com" method="POST" enctype="multipart/form-data">
-                            <p v-if="errors.length">
-                                <b>
-                                    Please correct the following error(s):
-                                </b>
-                                <ul>
-                                    <li v-for="error in errors" :key="error">
-                                        {{ error }}
-                                    </li>
-                                </ul>
-                            </p>
-                            <input class="form-control form-control-lg" name="name" type="text" placeholder="Full name*" aria-label=".form-control-lg example" v-model="name">
-                            <input class="form-control form-control-lg" type="email" placeholder="Email address*" name="email" aria-label=".form-control-lg example" v-model="email">
-                            <input class="form-control form-control-lg" name="subject" type="text" placeholder="Subject" aria-label=".form-control-lg example" v-model="subject">
-                            <div class="mb-3 text-area">
+                        <form @submit.prevent="formSubmit" action="https://formsubmit.co/harriselvin6@gmail.com" method="POST" enctype="multipart/form-data" ref="form">
+                            <div class="form-group">
+                                <input class="form-control form-control-lg" name="name" type="text" placeholder="Full name*" aria-label=".form-control-lg example" v-model="formData.name">
+                                <span v-if="errors.name" class="error">{{ errors.name }}</span>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control form-control-lg" type="email" placeholder="Email address*" name="email" aria-label=".form-control-lg example" v-model="formData.email">
+                                <span v-if="errors.email" class="error">{{ errors.email }}</span>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control form-control-lg" name="subject" type="text" placeholder="Subject" aria-label=".form-control-lg example" v-model="formData.subject">
+                                <span v-if="errors.phone" class="error">{{ errors.phone }}</span>
+                            </div>
+                            <div class="mb-3 text-area form-group">
                                 <label for="exampleFormControlTextarea1" class="form-label">Message*</label>
-                                <textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="3" v-model="message"></textarea>
+                                <textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="3" v-model="formData.message"></textarea>
+                                <span v-if="errors.message" class="error">{{ errors.message }}</span>
                             </div>
                             <button class="btn btn-primary" type="submit">Send</button>
                         </form>
@@ -63,50 +73,67 @@
     </div>
 </template>
 <script>
+import { toast } from 'vue3-toastify';
+import 'vue3-toastify/dist/index.css';
+
 export default {
     data() {
         return {
-            name: '',
-            email: '',
-            subject: '',
-            message: '',
-            errors: [],
+            formData: {
+                name: '',
+                email: '',
+                subject: '',
+                message: '',
+                toastId: '',
+                toastIds: [],
+                setup() {
+                    const notify = () => {
+                    toast("Wow so easy !", {
+                            autoClose: 1000,
+                    }); // ToastOptions
+                    }
+                    return { notify };
+                }
+            },
+            errors: {}
         }
     },
     methods: {
         formSubmit() {
-            this.errors = [];
-
-            if(this.name && this.email && this.message) return true;
-            if(!this.name) {
-                this.errors.push("Name required.");
+            const { name, email, subject, message } = this.formData
+            let errors = {}
+    
+            if (!name) {
+            errors.name = 'Please enter your name'
             }
-            if(!this.email) {
-                this.errors.push("Email required.");
-            } else if (!this.validEmail(this.email)) {
-                this.errors.push("Valid email required")
+            if (!email) {
+            errors.email = 'Please enter your email'
+            } else if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
+            errors.email = 'Please enter a valid email'
             }
-            if(!this.message) {
-                this.errors.push("Message required.");
+            if (!subject) {
+            errors.phone = 'Please enter your subject'
             }
-            // e.preventDefault();
-
-            if (this.errors.length) {
-                // No errors, proceed with form submission
-                this.$refs.form.submit()
-
-                console.log('Message has been sent');
-                this.name = ''
-                this.email = ''
-                this.subject = ''
-                this.message = ''
+            if (!message) {
+            errors.message = 'Please enter a message'
+            }
+    
+            if (Object.keys(errors).length > 0) {
+            this.errors = errors
+            } else {
+            // Form is valid, send the message
+            this.$refs.form.submit()
+            
+                toast.info(
+                    '!form submitted successfully',
+                    {
+                    rtl: true,
+                    limit: 3,
+                    position: toast.POSITION.TOP_CENTER,
+                    },
+                );
             }
         },
-        validEmail(email) {
-            /* eslint-disable */
-            let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@(([^<>()\[\]\\.,;:\s@"]+\.)+[^<>()\[\]\\.,;:\s@"]{2,})$/i;
-            return re.test(email)
-        }
     }
 }
 </script>
@@ -142,7 +169,7 @@ export default {
     .question {
         color: #00abf0;
     }
-    .contact-me {
+    .contact-me .email, .phone {
         display: flex;
     } 
     .mail-me {
@@ -165,6 +192,10 @@ export default {
         height: 3em;
         width: 3em;
     }
+    .detail-box .bi-telephone {
+        height: 3em;
+        width: 3em;
+    }
     [data-bs-theme='light'] .contact-mobile .bi-github {
         fill: black;
     }
@@ -174,6 +205,9 @@ export default {
     [data-bs-theme='light'] .detail-box .bi-envelope {
         fill: black;
     }
+    [data-bs-theme='light'] .detail-box .bi-telephone {
+        fill: black;
+    }
     [data-bs-theme='dark'] .contact-mobile .bi-github {
         fill: #dee2e6;
     }
@@ -181,6 +215,9 @@ export default {
         fill: #dee2e6;
     }
     [data-bs-theme='dark'] .detail-box .bi-envelope {
+        fill: #dee2e6;
+    }
+    [data-bs-theme='dark'] .detail-box .bi-telephone {
         fill: #dee2e6;
     }
     .form {

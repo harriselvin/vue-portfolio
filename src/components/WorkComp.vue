@@ -75,7 +75,8 @@ export default {
     }
     .work-sec {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(min(20em, 100%), 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(min(15em, 100%), 1fr));
+        gap: 25cqi;
     }
     .work {
         margin: 1em auto;
@@ -83,7 +84,7 @@ export default {
     .work-box {
         border: 2px solid;
         border-radius: 5px;
-        width: clamp(10em, 85vw, 20em);
+        width: clamp(10em, 100vw, 20em);
     }
     .work-heading {
         margin: 0 0 1em;
@@ -106,5 +107,14 @@ export default {
     }
     .contact-details {
         font-weight: 400;
+    }
+
+    @media  only screen and (max-width: 500px) {
+        .work-sec {
+            gap: .5em;
+        }
+        .work-box {
+            width: clamp(10em, 85vw, 20em);
+        }
     }
 </style>

@@ -3,7 +3,7 @@
     <div class="home-container">
       <div class="title">
         <h1>Hi, I'm <span class="name">Elvin Harris</span></h1>
-        <div class="h3">I am a 
+        <div class="h3">Aspiring 
           <ul class="dynamic-text">
             <li><span class="title-text item sd">Software Developer</span></li>
             <li><span class="title-text item ui">UI/UX Designer</span></li>
@@ -40,8 +40,6 @@ export default {
   },
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   #home {
     min-height: 100svh;
@@ -115,10 +113,9 @@ export default {
     font-size: max(1em, 2.5cqi);
   }
 
-
   .dynamic-text {
-    line-height: 39px;
-    height: 1.18em;
+    line-height: 45px;
+    height: 1.1em;
     overflow: hidden;
     text-align: left;
   }
@@ -138,7 +135,7 @@ export default {
 
   @keyframes slide {
     100% {
-      top: -80px;
+      top: -90px;
     }
   }
 
@@ -150,7 +147,7 @@ export default {
     content: "";
     position: absolute;
     left: 0;
-    height: 110%;
+    height: 2em;
     width: 100%;
     background: var(--white-bg, white);
     border-left: 2px solid #00abf0;
@@ -185,6 +182,11 @@ export default {
 
   .cv {
     text-decoration: none;
+    transition: .3s;
+  }
+
+  .cv:hover {
+    opacity: .8;
   }
 
   .cv:active {
@@ -265,7 +267,7 @@ export default {
     }
 
     .dynamic-text li {
-      margin-top: -.75em;
+      margin-top: -.8em;
     }
 
     .dynamic-text li .title-text::after {

@@ -1,6 +1,11 @@
 <template>
     <div class="slots">
-        <div v-if="typeof projects == 'object'">
+        <div v-if="loading">
+            <slot name="loadingSlot">
+                <p>Loading...</p>
+            </slot>
+        </div>
+        <div v-else-if="typeof projects == 'object'">
             <slot name="projectSlot">
                 <p>projects.name</p>
                 <p>projects.description</p>
@@ -50,7 +55,15 @@
 </template>
 <script>
 export default {
-    props: ['aboutMe', 'projects', 'education', "techSkills", "softSkills", 'workExp', 'testmonials']
+    props: ['aboutMe', 'projects', 'education', "techSkills", "softSkills", 'workExp', 'testmonials'],
+    data() {
+        return {
+            loading: true
+        }
+    },
+    mounted() {
+        this.loading = false;
+    }
 }
 </script>
 <style>
