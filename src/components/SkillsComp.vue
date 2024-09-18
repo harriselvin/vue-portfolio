@@ -1,9 +1,9 @@
 <template>
     <div id="skills" data-aos="fade-right">
         <div class="skill-comp">
-            <div class="skills-title">
+            <!-- <div class="skills-title">
                 <h2>Skills</h2>
-            </div>
+            </div> -->
             <div>
                 <h4>Tech Skills</h4>
             </div>
@@ -73,7 +73,7 @@ export default {
         overflow-x: hidden;
     }
     .skill-comp {
-        padding-top: max(4em, 6em);
+        /* padding-top: max(4em, 6em); */
         margin: 0 10cqi;
     }
     .skills-title h2 {
