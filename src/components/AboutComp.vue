@@ -45,7 +45,7 @@ export default {
 </script> 
 <style scoped>
     #about {
-        min-height: 100vh;
+        min-height: 80vh;
         overflow-x: hidden;
     }
     .about-content {

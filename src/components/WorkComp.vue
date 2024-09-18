@@ -67,7 +67,7 @@ export default {
 </script>
 <style>
     #work {
-        min-height: 100svh;
+        min-height: 80svh;
     }
     .work-title {
         margin: 0 0 2em;
