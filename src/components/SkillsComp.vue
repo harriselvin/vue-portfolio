@@ -82,14 +82,14 @@ export default {
     }
     .tech-skills {
         border: 2px solid;
-        width: 8.5em;
-        min-width: 5em;
+        width: 8em;
+        min-width: 3em;
         margin: 2em auto;
         filter: grayscale(0);
     }
     .soft-skills {
         border: 2px solid;
-        width: 10em;
+        width: 11em;
         min-width: 5em;
         margin: 2em auto;
         filter: grayscale(0);
@@ -100,7 +100,7 @@ export default {
     }
     .soft {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(min(10em, 100%), 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(min(12em, 100%), 1fr));
     }
     .tech-skills * {
         width: 100%;
@@ -110,5 +110,20 @@ export default {
     }
     .skill-name {
         border-top: 1px solid;
+    }
+
+    @media only screen and (max-width: 500px) {
+        .tech-skills {
+            width: 5em;
+        }
+        .soft-skills {
+            width: 5em;
+        }
+        .tech {
+            grid-template-columns: repeat(auto-fit, minmax(min(6em, 100%), 1fr));
+        }
+        .soft {
+            grid-template-columns: repeat(auto-fit, minmax(min(6em, 100%), 1fr));
+        }
     }
 </style>

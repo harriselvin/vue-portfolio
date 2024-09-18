@@ -8,7 +8,7 @@
           <div class="projects" v-for="project in projectsData()" :key="project">
             <card-comp :projects="project">
               <template #projectSlot>
-                <div class="pro-box">
+                <div class="pro-box" :data-description="project.description" :data-technologies="project.technologies">
                   <img :src="project.image">
                 </div>
                 <div class="pro-name">
@@ -76,6 +76,49 @@ export default {
       flex-wrap: wrap;
       width: clamp(10em, 85vw, 15em);
       height: 15em;
+      position: relative;
+      overflow: hidden;
+      transition: .3s;
+    }
+    .pro-box::after {
+      content: '\A' attr(data-description) '\A \A Technologies: ' attr(data-technologies);
+      white-space: pre-wrap;
+      height: 100%;
+      display: block;
+      background-color: transparent;
+      text-shadow: 1px 1px 5px white;
+      position: absolute;
+      top: 0;
+      transform: translateY(100%);
+      transition: transform .5s, opacity .5s;
+      opacity: 0;
+      animation: slide-up .5s forwards;
+    }
+    [data-bs-theme='light'] .pro-box:hover {
+      color: black;
+      border-left: 2px solid black;
+      border-right: 2px solid black;
+    }
+    [data-bs-theme='dark'] .pro-box:hover {
+      color: black;
+      border-left: 2px solid white;
+      border-right: 2px solid white;
+    }
+    .pro-box[data-description] {
+      line-height: 2em;
+    }
+    .pro-box:hover {
+      filter: grayscale(1);
+    }
+    .pro-box:hover img {
+      transform: translateY(0);
+      filter: blur(.4em);
+    }
+    .pro-box:not(:hover)::after {
+      animation: slide-down 0.5s forwards;
+      transform-style: flat;
+      transform: translateY(100%);
+      opacity: 0;
     }
     .pro-box img {
       height: 100%;
@@ -83,6 +126,26 @@ export default {
       object-fit: cover;
       border-right: 2px solid;
       border-left: 2px solid;
+    }
+    @keyframes slide-up {
+      from {
+        transform: translateY(100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    @keyframes slide-down {
+      from {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      to {
+        transform: translateY(100%);
+        opacity: 0;
+      }
     }
     .pro-name {
       border-top: 2px solid;

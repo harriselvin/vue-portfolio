@@ -15,6 +15,9 @@
                                     {{ work.placeOfWork }}
                                 </div>
                                 <div class="work-content">
+                                    <div class="work-position">
+                                        <span>Position:</span> {{ work.position }}
+                                    </div>
                                     <div class="work-year">
                                         <span>Duration:</span> {{ work.year }}
                                     </div>

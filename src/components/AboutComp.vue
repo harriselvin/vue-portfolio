@@ -1,9 +1,6 @@
 <template>
     <div id="about" data-aos="zoom-out-left">
         <div class="about-content">
-            <div class="about-image">
-                <img src="https://harriselvin.github.io/hostedImages/Images/Elvin_personal_portfolio.jpg" alt="Image of Elvin">
-            </div>
             <div class="about-comp">
                 <h2 class="about">About Me</h2>
                 <div class="about-title">
@@ -71,7 +68,7 @@ export default {
     }
     .about-image {
         padding-top: max(4em, 6em);
-        margin: 2em;
+        margin-left: max(1cqi, 5cqi);
     }
     .about-image img {
         width: clamp(5em, 100vw, 25em);
@@ -106,6 +103,10 @@ export default {
         #about {
             min-height: 50svh;
             overflow-x: hidden;
+        }
+        .about-image {
+            padding-top: max(4em, 6em);
+            margin-left: 0;
         }
     }
 </style>
