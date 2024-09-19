@@ -14,7 +14,7 @@
         </a>
       </div>
       <div class="my-image">
-        <img :src="'https://harriselvin.github.io/hostedImages/Images/Elvin_personal_portfolio_shoulders.jpg'" />
+        <img :src="'https://harriselvin.github.io/hostedImages/Images/Elvin_personal_portfolio_shoulders.jpg'" loading="lazy" />
         <div class="social">
           <ul class="social-links">
               <li class="list-group-item item-1"><a href="https://github.com/harriselvin" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
@@ -115,7 +115,7 @@ export default {
 
   .dynamic-text {
     line-height: 45px;
-    height: 1.1em;
+    height: 1.2em;
     overflow: hidden;
     text-align: left;
   }

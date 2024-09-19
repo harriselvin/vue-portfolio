@@ -1,6 +1,7 @@
 <template>
-    <div id="education" data-aos="fade-up"
-    data-aos-duration="1000">
+    <div id="education" data-aos="fade-left"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
         <div class="edu-comp">
             <div class="edu-title">
                 <h2>Education</h2>
