@@ -4,7 +4,7 @@
      data-aos-easing="ease-in-sine">
         <div class="work-comp">
             <div class="work-title">
-                <h2>Work Experience</h2>
+                <h2>Experience</h2>
             </div>
             <div class="work-sec">
                 <div class="work" v-for="work in workData()" :key="work">
@@ -73,7 +73,7 @@ export default {
         margin: 0 0 2em;
     }
     .work-comp {
-        padding-top: max(4em, 6em);
+        padding-top: max(2em, 4em);
         margin: 0 10cqi;
     }
     .work-sec {

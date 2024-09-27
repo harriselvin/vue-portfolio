@@ -114,7 +114,6 @@ export default {
   }
 
   .dynamic-text {
-    line-height: 45px;
     height: 1.2em;
     overflow: hidden;
     text-align: left;
@@ -193,22 +192,48 @@ export default {
     color: white;
   }
 
+  @media only screen and (min-width: 851px) and  (max-width: 1200px) {
+    .dynamic-text {
+      height: 1.3em;
+    }
+
+    .dynamic-text li {
+      margin-top: .1em;
+    }
+
+    .dynamic-text li .title-text::after {
+      height: 200%;
+    }
+
+    @keyframes slide {
+      100% {
+        top: -80px;
+      }
+    }
+  }
+
   @media only screen and (min-width: 598px) and (max-width: 850px) {
     .btn {
       display: none;
     }
     
     .dynamic-text {
-      line-height: 52px;
+      line-height: 53px;
       height: 1.5em;
     }
 
     .dynamic-text li {
-      margin-top: -.6em;
+      margin-top: -.9em;
     }
 
     .dynamic-text li .title-text::after {
-      height: 180%;
+      height: 200%;
+    }
+
+    @keyframes slide {
+      100% {
+        top: -80px;
+      }
     }
   }
 
@@ -241,15 +266,21 @@ export default {
 
     .dynamic-text {
       line-height: 50px;
-      height: 1.4em;
+      height: 1.3em;
     }
 
     .dynamic-text li {
-      margin-top: -.6em;
+      margin-top: -.8em;
     }
 
     .dynamic-text li .title-text::after {
       height: 180%;
+    }
+
+    @keyframes slide {
+      100% {
+        top: -75px;
+      }
     }
   }
   @media screen and (max-width: 300px) {
@@ -263,15 +294,21 @@ export default {
 
     .dynamic-text {
       line-height: 50px;
-      height: 1.5em;
+      height: 1.4em;
     }
 
     .dynamic-text li {
-      margin-top: -.8em;
+      margin-top: -.85em;
     }
 
     .dynamic-text li .title-text::after {
-      height: 180%;
+      height: 190%;
+    }
+
+    @keyframes slide {
+      100% {
+        top: -73px;
+      }
     }
   }
 </style>

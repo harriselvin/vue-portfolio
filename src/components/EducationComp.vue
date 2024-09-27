@@ -62,7 +62,7 @@ export default {
 </script>
 <style>
     #education {
-        min-height: 80svh;
+        min-height: 70svh;
     }
     .edu-comp {
         padding-top: max(4em, 6em);

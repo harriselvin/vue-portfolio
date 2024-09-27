@@ -18,9 +18,6 @@ export default {
 }
 </script>
 <style>
-    #footer {
-        min-height: 10svh;
-    }
     [data-bs-theme="light"] .footer {
         background: linear-gradient(to right, black 10%,#D9D9D9 38%, #D9D9D9 67%, black);
     }

@@ -11,7 +11,7 @@
             <!-- <a href="#skills">Skills</a> -->
             <a href="#projects">Projects</a>
             <a href="#education">Education</a>
-            <a href="#work">Work</a>
+            <a href="#work">Experience</a>
             <!-- <a href="#testimonials">Testimonials</a> -->
             <a href="#contact">Contact</a>
         </nav>
