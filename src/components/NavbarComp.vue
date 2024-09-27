@@ -19,7 +19,7 @@
             <a href="https://digital-resume-psi.vercel.app/" target="_blank" class="btn">Digital Resume</a>
         </div> -->
         <div>
-            <theme-comp />
+            <theme-comp /> 
         </div>
     </div>
 
