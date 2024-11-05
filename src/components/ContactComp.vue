@@ -29,15 +29,17 @@
                                 </div>
                                 <p class="mail-me">Call me at <br><a href="tel: 0625355271">062 535 5271</a></p>
                             </div>
-                        </div>
-                        <div class="location">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
-                                <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/>
-                                <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
-                            </svg>
-                            <p>
-                                Lavender Hill, Cape Town, South Africa
-                            </p>
+                            <div class="location">
+                                <div class="detail-box">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                        <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/>
+                                        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                                    </svg>
+                                </div>
+                                <p class="mail-me">
+                                    Lavender Hill, Cape Town, <br>South Africa
+                                </p>
+                            </div>
                         </div>
                         <div class="contact-mobile">
                             <ul class="contact-links">
@@ -66,7 +68,7 @@
                             </div>
                             <div class="form-group">
                                 <input class="form-control form-control-lg" name="subject" type="text" placeholder="Subject" aria-label=".form-control-lg example" v-model="formData.subject">
-                                <span v-if="errors.phone" class="error">{{ errors.phone }}</span>
+                                <!-- <span v-if="errors.phone" class="error">{{ errors.phone }}</span> -->
                             </div>
                             <div class="mb-3 text-area form-group">
                                 <label for="exampleFormControlTextarea1" class="form-label">Message*</label>
@@ -109,7 +111,7 @@ export default {
     },
     methods: {
         formSubmit() {
-            const { name, email, subject, message } = this.formData
+            const { name, email, message } = this.formData
             let errors = {}
     
             if (!name) {
@@ -120,9 +122,9 @@ export default {
             } else if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
             errors.email = 'Please enter a valid email'
             }
-            if (!subject) {
-            errors.phone = 'Please enter your subject'
-            }
+            // if (!subject) {
+            // errors.phone = 'Please enter your subject'
+            // }
             if (!message) {
             errors.message = 'Please enter a message'
             }
@@ -156,6 +158,10 @@ export default {
     }
     .contact-title {
         margin: 0 0 2em;
+        text-transform: uppercase;
+        font-family: "Kanit", sans-serif;
+        font-weight: 500;
+        font-style: normal;
     }
     .contact {
         display: flex;
@@ -178,7 +184,7 @@ export default {
     .question {
         color: #00abf0;
     }
-    .contact-me .email, .phone {
+    .contact-me .email, .phone, .location {
         display: flex;
     } 
     .mail-me {
@@ -190,14 +196,6 @@ export default {
     .contact-mobile svg {
         height: 2em;
         width: 2em;
-    }
-    .location {
-        display: flex;
-        margin-left: 5cqi;
-    }
-    .location svg {
-        color: #00abf0;
-        height: 1.5em;
     }
     .contact-links {
         display: flex;
@@ -213,6 +211,10 @@ export default {
         height: 3em;
         width: 3em;
     }
+    .detail-box .bi-geo-alt {
+        /* color: #00abf0; */
+        height: 3em;
+    }
     [data-bs-theme='light'] .contact-mobile .bi-github {
         fill: black;
     }
@@ -225,6 +227,9 @@ export default {
     [data-bs-theme='light'] .detail-box .bi-telephone {
         fill: black;
     }
+    [data-bs-theme='light'] .detail-box .bi-geo-alt {
+        fill: black;
+    }
     [data-bs-theme='dark'] .contact-mobile .bi-github {
         fill: #dee2e6;
     }
@@ -235,6 +240,9 @@ export default {
         fill: #dee2e6;
     }
     [data-bs-theme='dark'] .detail-box .bi-telephone {
+        fill: #dee2e6;
+    }
+    [data-bs-theme='dark'] .detail-box .bi-geo-alt {
         fill: #dee2e6;
     }
     .form {

@@ -16,10 +16,10 @@
                 </div>
                 <div class="links">
                   <a :href=project.vercel target="_blank">
-                    <button class="">Live</button>
+                    <button class="button">Live</button>
                   </a>
                   <a :href=project.gitHub target="_blank">
-                    <button class="">
+                    <button class="button">
                       <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-github" viewBox="0 0 16 16">
                         <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
                       </svg>
@@ -62,6 +62,12 @@ export default {
         padding-top: max(4em, 6em);
         margin: 0 10cqi;
     }
+    .pro-title {
+      text-transform: uppercase;
+      font-family: "Kanit", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+    }
     .pro-sec {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(min(16em, 100%), 1fr));
@@ -69,8 +75,8 @@ export default {
     .projects {
       margin: 0 auto;
       border-top: 2px solid;
-      border-bottom: 2px solid;
       margin: 1em auto;
+      border-radius: 5px;
     }
     .pro-box {
       flex-wrap: wrap;
@@ -79,6 +85,7 @@ export default {
       position: relative;
       overflow: hidden;
       transition: .3s;
+      filter: grayscale(1);
     }
     .pro-box::after {
       content: '\A' attr(data-description) '\A \A Technologies: ' attr(data-technologies);
@@ -98,11 +105,15 @@ export default {
       color: black;
       border-left: 2px solid black;
       border-right: 2px solid black;
+      border-bottom: 2px solid;
+      border-radius: 5px;
     }
     [data-bs-theme='dark'] .pro-box:hover {
       color: black;
       border-left: 2px solid white;
       border-right: 2px solid white;
+      border-bottom: 2px solid;
+      border-radius: 5px;
     }
     .pro-box[data-description] {
       line-height: 2em;
@@ -126,6 +137,8 @@ export default {
       object-fit: cover;
       border-right: 2px solid;
       border-left: 2px solid;
+      border-bottom: 2px solid;
+      border-radius: 5px;
     }
     @keyframes slide-up {
       from {
@@ -147,34 +160,25 @@ export default {
         opacity: 0;
       }
     }
-    .pro-name {
-      border-top: 2px solid;
-    }
     .links {
       display: flex;
-      border-right: 2px solid;
-      border-left: 2px solid;
+      padding: 0 1px;
     }
     .links a{
       width: 100%;
       height: 100%;
     }
     /* Light mode */
-    [data-bs-theme='light'] .links a {
-      border-top: 2px solid black;
-    }
     [data-bs-theme='light'] .bi-github {
       fill: black;
     }
     /* Dark mode */
-    [data-bs-theme='dark'] .links a {
-      border-top: 2px solid white;
-    }
     [data-bs-theme='dark'] .bi-github {
       fill: white;
     }
     .links button{
       width: 100%;
       height: 2em;
+      border-radius: 5px;
     }
 </style>

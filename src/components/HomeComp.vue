@@ -3,13 +3,13 @@
     <div class="home-container">
       <div class="title">
         <h1>Hi, I'm <span class="name">Elvin Harris</span></h1>
-        <div class="h3">Aspiring 
+        <div class="h3">
           <ul class="dynamic-text">
             <li><span class="title-text item sd">Software Developer</span></li>
             <li><span class="title-text item ui">UI/UX Designer</span></li>
           </ul>
         </div>
-        <a class="cv" href="https://harriselvin.github.io/hostedImages/Links/Elvin%20Harris%20latest%20CV%202.pdf" target="_blank">
+        <a class="cv" href="https://harriselvin.github.io/hostedImages/Links/Elvin-Harris-CV.pdf" target="_blank">
           <button class="btn">View CV</button>
         </a>
       </div>
@@ -42,7 +42,7 @@ export default {
 </script>
 <style scoped>
   #home {
-    min-height: 100svh;
+    min-height: 80svh;
     overflow-x: hidden;
   }
 
@@ -121,7 +121,7 @@ export default {
 
   .dynamic-text li {
     list-style: none;
-    margin-left: -20px;
+    margin-left: -30px;
     position: relative;
     top: 0;
     animation: slide 6s steps(2) infinite;
@@ -237,7 +237,7 @@ export default {
     }
   }
 
-  @media only screen and (max-width: 533px) {
+  @media only screen and (max-width: 475px) {
     .social-links {
       display: flex;
       margin: 20% 50px 0 0;
@@ -252,6 +252,10 @@ export default {
     }
     .btn {
       display: none;
+    }
+    .dynamic-text li {
+      margin-top: -.85em;
+      margin-left: -10px;
     }
   }
 
@@ -299,6 +303,7 @@ export default {
 
     .dynamic-text li {
       margin-top: -.85em;
+      margin-left: -10px;
     }
 
     .dynamic-text li .title-text::after {

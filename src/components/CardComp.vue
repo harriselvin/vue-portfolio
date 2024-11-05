@@ -46,6 +46,20 @@
                 <p>testimonials.message</p>
             </slot>
         </div>
+        <div v-else-if="typeof certificates == 'object'">
+            <slot name="certificateSlot">
+                <p>certificates.name</p>
+                <p>certificates.description</p>
+                <p>certificates.date</p>
+            </slot>
+        </div>
+        <div v-else-if="typeof badges == 'object'">
+            <slot name="badgeSlot">
+                <p>badges.name</p>
+                <p>badges.description</p>
+                <p>badges.date</p>
+            </slot>
+        </div>
         <div v-else>
             <slot name="aboutSlot">
                 <h2>aboutMe</h2>
@@ -55,7 +69,7 @@
 </template>
 <script>
 export default {
-    props: ['aboutMe', 'projects', 'education', "techSkills", "softSkills", 'workExp', 'testmonials'],
+    props: ['aboutMe', 'projects', 'education', "techSkills", "softSkills", 'workExp', 'testmonials', 'certificates', 'badges'],
     data() {
         return {
             loading: true

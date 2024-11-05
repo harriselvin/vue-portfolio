@@ -7,6 +7,7 @@ import EducationComp from '@/components/EducationComp.vue';
 import WorkComp from '@/components/WorkComp.vue';
 import TestimonialComp from '@/components/TestimonialComp.vue';
 import ContactComp from '@/components/ContactComp.vue';
+import CertificateView from '@/views/CertificateView.vue';
 
 const routes = [
   {
@@ -48,6 +49,11 @@ const routes = [
     path: '/contact',
     name: 'contact',
     component: ContactComp
+  },
+  {
+    path: '/certificates',
+    name: 'certificates',
+    component: CertificateView
   }
 ]
 

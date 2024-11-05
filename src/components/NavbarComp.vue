@@ -5,7 +5,17 @@
                 <img src="https://harriselvin.github.io/hostedImages/Images/Elvin_logo.png" alt="logo">
             </a>
         </div>
-        <nav>
+        <nav v-if="$route.name == 'certificates'">
+            <a href="/">Home</a>
+            <a href="/#about">About</a>
+            <!-- <a href="/#skills">Skills</a> -->
+            <a href="/#projects">Projects</a>
+            <a href="/#education">Education & Experience</a>
+            <!-- <a href="/#work">Experience</a> -->
+            <!-- <a href="/#testimonials">Testimonials</a> -->
+            <a href="/#contact">Contact</a>
+        </nav>
+        <nav v-else>
             <a href="#">Home</a>
             <a href="#about">About</a>
             <!-- <a href="#skills">Skills</a> -->
@@ -76,7 +86,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-briefcase" viewBox="0 0 16 16">
                             <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5m1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0M1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5"/>
                           </svg>
-                        <a class="nav-link active" aria-current="page" href="#work">Work</a>
+                        <a class="nav-link active" aria-current="page" href="#work">Experience</a>
                     </li>
                     <!-- <li class="nav-item">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-chat-square-heart" viewBox="0 0 16 16">
@@ -95,7 +105,7 @@
                 </ul>
                 <div class="btn-links">
                     <!-- <a class="btn" href="https://digital-resume-psi.vercel.app/" role="button" target="_blank">Digital Resume</a> -->
-                    <a class="btn" href="https://harriselvin.github.io/hostedImages/Links/Elvin%20Harris%20latest%20CV%202.pdf" target="_blank" role="button">View CV</a>
+                    <a class="btn" href="https://harriselvin.github.io/hostedImages/Links/Elvin-Harris-CV.pdf" target="_blank" role="button">View CV</a>
                 </div>
             </div>
             </div>
@@ -110,7 +120,7 @@ export default {
     }
 }
 </script>
-<style>
+<style scoped>
     [data-bs-theme='dark'] .navbar-toggler {
         background-color: #212529;
     }

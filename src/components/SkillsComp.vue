@@ -5,16 +5,16 @@
                 <h2>Skills</h2>
             </div> -->
             <div>
-                <h4>Tech Skills</h4>
+                <h2 class="skill-sub">Tech Skills</h2>
             </div>
             <div class="skill-sec tech">
                 <div class="tech-skills" v-for="techSkill in techSkills()" :key="techSkill">
                     <card-comp :techSkills="techSkill">
                         <template #techSkillSlot>
                             <div class="skill-items">
-                                <a class="skill-link" :href="techSkill.link" rel="noreferrer" target="_blank">
+                                <!-- <a class="skill-link" :href="techSkill.link" rel="noreferrer" target="_blank"> -->
                                     <img class="skill-img" :src="techSkill.image" alt={{techSkill.name}} width="40" loading="lazy" />
-                                </a>
+                                <!-- </a> -->
                             </div>
                             <div class="skill-name">
                                 {{ techSkill.name }}
@@ -24,7 +24,7 @@
                 </div>
             </div>
             <div>
-                <h4>Soft Skills</h4>
+                <h2 class="skill-sub">Soft Skills</h2>
             </div>
             <div class="skill-sec soft">
                 <div class="soft-skills" v-for="softSkill in softSkills()" :key="softSkill">
@@ -39,6 +39,16 @@
                         </template>
                     </card-comp>
                 </div>
+            </div>
+            <div>
+                <h2 class="skill-sub">Certificates & Badges</h2>
+            </div>
+            <div>
+                <p>
+                    <router-link to="/certificates">
+                        View my Certificates & Badges
+                    </router-link>
+                </p>
             </div>
         </div>
     </div>
@@ -80,19 +90,32 @@ export default {
         text-transform: uppercase;
         margin: 0 0 1em;
     }
+    .skill-sub {
+        text-transform: uppercase;
+        font-family: "Kanit", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+    }
     .tech-skills {
         border: 2px solid;
+        border-radius: 5px;
         width: 8em;
         min-width: 3em;
         margin: 2em auto;
+    }
+    .tech-skills .soft-skills, .skill-img {
+        filter: grayscale(1);
+        transition: .5s;
+    }
+    .tech-skills .soft-skills, .skill-img:hover {
         filter: grayscale(0);
     }
     .soft-skills {
         border: 2px solid;
+        border-radius: 5px;
         width: 11em;
         min-width: 5em;
         margin: 2em auto;
-        filter: grayscale(0);
     }
     .tech {
         display: grid;

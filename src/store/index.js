@@ -10,6 +10,8 @@ export default createStore({
     softSkills: null,
     workExp: null,
     testimonials: null,
+    certificates: null,
+    badges: null,
     loading: true
   },
   mutations: {
@@ -34,6 +36,12 @@ export default createStore({
     setTestimonials(state, payload) {
       state.testimonials = payload
     },
+    setCertificates(state, payload) {
+      state.certificates = payload
+    },
+    setBadges(state, payload) {
+      state.badges = payload
+    },
     setLoading(state, payload) {
       state.loading = payload
     }
@@ -43,7 +51,7 @@ export default createStore({
       try {
         commit('setLoading', true)
         let {data} = await axios.get('https://harriselvin.github.io/first_api/data/data.json')
-        let {aboutMe, projects, education, techSkills, softSkills, workExp, testimonials} = data
+        let {aboutMe, projects, education, techSkills, softSkills, workExp, testimonials, certificates, badges} = data
   
         commit('setAboutMe', aboutMe)
         commit('setProjects', projects)
@@ -52,6 +60,8 @@ export default createStore({
         commit('setSoftSkills', softSkills)
         commit('setWorkExp', workExp)
         commit('setTestimonials', testimonials)
+        commit('setCertificates', certificates)
+        commit('setBadges', badges)
       } catch (error) {
         console.log("Error fetching data:", error);
         commit('setLoading', false)

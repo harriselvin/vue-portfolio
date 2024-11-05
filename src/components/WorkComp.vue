@@ -71,6 +71,10 @@ export default {
     }
     .work-title {
         margin: 0 0 2em;
+        text-transform: uppercase;
+        font-family: "Kanit", sans-serif;
+        font-weight: 500;
+        font-style: normal;
     }
     .work-comp {
         padding-top: max(2em, 4em);
@@ -78,8 +82,8 @@ export default {
     }
     .work-sec {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(min(15em, 100%), 1fr));
-        gap: 25cqi;
+        grid-template-columns: repeat(auto-fit, minmax(min(20em, 100%), 1fr));
+        gap: 5cqi;
     }
     .work {
         margin: 1em auto;
@@ -88,6 +92,9 @@ export default {
         border: 2px solid;
         border-radius: 5px;
         width: clamp(10em, 100vw, 20em);
+    }
+    .work-desc {
+        height: 10em;
     }
     .work-heading {
         margin: 0 0 1em;

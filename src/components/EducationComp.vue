@@ -26,8 +26,8 @@
                                             <p>Year: {{ edu.year }}</p>
                                         </div>
                                         <div class="edu-contact">
-                                            <p>Contact Person: {{ edu.contact[0].name }}</p>
-                                            <p>Contact Details: {{ edu.contact[0].contactDetails }}</p>
+                                            <p class="person">Contact Person: {{ edu.contact[0].name }}</p>
+                                            <p class="details">Contact Details: {{ edu.contact[0].contactDetails }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -68,6 +68,12 @@ export default {
         padding-top: max(4em, 6em);
         margin: 0 10cqi;
     }
+    .edu-title {
+        text-transform: uppercase;
+        font-family: "Kanit", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+    }
     .edu-sec {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(min(15em, 100%), 1fr));
@@ -78,7 +84,7 @@ export default {
     .edu-box {
         border: 2px solid;
         border-radius: 5px;
-        height: 21em;
+        height: 22em;
         width: clamp(10em, 85vw, 15em);
         overflow: hidden;
     }
@@ -93,6 +99,10 @@ export default {
     .image img {
         height: 3em;
         object-fit: cover;
+        filter: grayscale(1);
+    }
+    .image img:hover {
+        filter: grayscale(0);
     }
     .edu-content {
         display: flex;
@@ -101,19 +111,21 @@ export default {
         align-items: center;
     }
     .edu-desc {
-        height: 5em;
+        height: 6em;
         padding: 1em 0;
         display: flex;
         justify-content: center;
-        align-items: center;
     }
     .edu-year {
-        height: 3em;
+        height: 2em;
         padding-bottom: 1em;
     }
     .edu-contact {
         padding-top: 1em;
         line-height: 1em;
+    }
+    .edu-contact .person {
+        height: 2em;
     }
     [data-bs-theme='light'] .edu-heading {
         background-color: black;

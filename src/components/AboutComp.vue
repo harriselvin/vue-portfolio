@@ -74,6 +74,9 @@ export default {
     .about-comp .about {
         text-transform: uppercase;
         padding: 0 0 1em;
+        font-family: "Kanit", sans-serif;
+        font-weight: 500;
+        font-style: normal;
     }
     .about-info .about-me {
         margin: 0 0 2em;
